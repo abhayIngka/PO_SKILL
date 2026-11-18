@@ -15,7 +15,7 @@
 
 | Order | Story | Points | Depends on | Owner | Status |
 |---|---|---|---|---|---|
-| 1 | [1.1 View Single Order Live Status (Tracer Bullet)](../epics.md#story-11-view-single-order-live-status-tracer-bullet) | 3 | none | Priya | In Progress |
+| 1 | [1.1 View Single Order Live Status (Tracer Bullet)](../epics.md#story-11-view-single-order-live-status-tracer-bullet) | 3 | none | Priya | Done (waiver: no merge, no demo, NFR3 not measured; see epics.md) |
 
 **Total committed:** 3 / 8 points
 

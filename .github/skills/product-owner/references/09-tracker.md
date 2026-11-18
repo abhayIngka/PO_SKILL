@@ -40,6 +40,28 @@ Adjust to the project's actual workflow; confirm the mapping once and record it.
 4. **Sprint:** keep sprint membership in sync with the sprint plan.
 5. **Drift check:** compare the tracker with `epics.md` and `backlog.md`; fix whichever is wrong and record the change.
 
+## Push rules (Jira and Confluence)
+
+These rules apply to every push, create, or update in Jira (epics, stories, tasks, bugs, sub-tasks) and Confluence (pages and child pages).
+
+1. **Explicit yes:** push only after the user asks for that exact item. A yes approves only what was shown.
+2. **Labels:** never add labels on your own. Add a label only when the user explicitly asks for it.
+3. **Provenance label `ai_assisted` is mandatory:** every item or page you create or update must carry the label `ai_assisted`, even if the user did not ask. It is the only label you may add unprompted. The user may remove it later; you must not remove it.
+4. **Keep existing labels:** when updating, preserve the current labels. Never replace the full label set.
+5. **Check for duplicates first:** before creating, search the space or project by title, including trashed items. If a match exists, ask the user which to update. Do not create a second copy silently.
+6. **Mandatory push procedure (no exceptions):**
+   1. Load the product-owner skill before pushing.
+   2. Create or update the item.
+   3. Add the `ai_assisted` label in the same push, plus any labels the user asked for. A push without the label is a failed push.
+   4. Read the labels back. If `ai_assisted` is missing, add it and read again.
+   5. Report the item ID or key and the labels confirmed. Do not report the push as done until step 4 passes.
+
+### Confluence API calls
+
+- Create: `POST {CONFLUENCE_URL}/rest/api/content` with `type`, `title`, `space.key`, and `body.storage`.
+- Add label: `POST {CONFLUENCE_URL}/rest/api/content/{id}/label` with body `[{"prefix":"global","name":"ai_assisted"}]`.
+- Verify: `GET {CONFLUENCE_URL}/rest/api/content/{id}/label` and confirm `ai_assisted` is in `results`.
+
 ## Reporting
 
 - Sprint: committed vs done points, burndown, carry-over.

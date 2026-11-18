@@ -85,7 +85,8 @@ So that I can immediately verify where my order is and when it last updated.
 **Estimate:** 3
 **Priority:** 1
 **Risk:** Medium
-**Status:** In Progress
+**Status:** Done (code reviewed; 7/7 tests passing. Code: `order-tracking/app/`; tests: `order-tracking/app/tests/`.
+**Waiver (PO sign-off, 2026-11-18):** Accepted without (a) merge to git, (b) recorded demo, (c) NFR3 p95 page-load measurement. These carry forward: merge and demo before the epic is closed; NFR3 measured in a follow-up.)
 **Assignee:** Priya
 **Tracker ID:** TBD
 **Runnable Done Check:** Sign in as Customer A, open order `#1001`, verify the page renders the exact status and timestamp from the order system in < 2s (p95) and updates within 5 minutes of an order-system status change; then request Customer B's order `#1002` or unknown order `#9999` and verify access is denied (HTTP 403/404); then simulate an order-system read timeout/error and verify a retry message renders without exposing raw errors.

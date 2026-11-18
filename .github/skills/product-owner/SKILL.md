@@ -58,6 +58,7 @@ Details, owners, and tracker mapping: [definitions.md](references/definitions.md
 5. Every story traces to an epic and a PRD requirement (FR/NFR id).
 6. Never guess estimates, dates, or views. Ask or list as open questions.
 7. Never push to a tracker or production without an explicit yes.
+8. **Push rules (Jira and Confluence):** every push needs an explicit yes for that item. Every pushed item or page must carry the label `ai_assisted`. Never add other labels unless the user asks. Never remove labels. Check for duplicates by title (including trashed items) before creating. Follow the mandatory procedure in [09-tracker.md](references/09-tracker.md): create, add `ai_assisted` in the same push, read the labels back, and only then report done. A push without `ai_assisted` is not complete.
 
 ## Where files live
 

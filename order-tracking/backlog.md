@@ -13,7 +13,7 @@ Stories are ordered by **dependencies first**, then **risk**, then **business va
 
 | Rank | Story | Epic | Value | Risk | Depends on | Points | Bucket | Status | Assignee |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | [1.1 View Single Order Live Status (Tracer Bullet)](./epics.md#story-11-view-single-order-live-status-tracer-bullet) | 1 | High | Medium | none | 3 | Now | In Progress | Priya |
+| 1 | [1.1 View Single Order Live Status (Tracer Bullet)](./epics.md#story-11-view-single-order-live-status-tracer-bullet) | 1 | High | Medium | none | 3 | Now | Done | Priya |
 | 2 | [1.2 View My Orders List with Current Status](./epics.md#story-12-view-my-orders-list-with-current-status) | 1 | High | Low | 1.1 | Needs estimate | Next | Backlog | Unassigned |
 | 3 | [1.3 Send Email Notification on Order Status Change](./epics.md#story-13-send-email-notification-on-order-status-change) | 1 | High | Medium | 1.1 | Needs estimate | Next | Backlog | Unassigned |
 
